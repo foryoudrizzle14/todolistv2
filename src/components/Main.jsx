@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './Header';
 import Form from './Form';
 import ListWorking from './ListWorking';
-import ListDone from './ListDone';
+// import ListDone from './ListDone';
 import GlobalStyle from '../GlogbalStyle';
 import styled from 'styled-components';
 
@@ -14,7 +14,7 @@ function Main() {
         <Header />
         <Form />
         <ListWorking />
-        <ListDone />
+        {/* <ListDone /> */}
       </Wrap>
     </>
   )
