@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { toggleStatusTodo, deleteTodo } from '../redux/modules/todos';
+// import { toggleStatusTodo, deleteTodo } from '../redux/modules/todos';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -8,10 +8,10 @@ function ListMap({ item }) {
   // useDispatch로 액션 객체 리듀서로 보내기
   const dispatch = useDispatch();
 
-  // 완료 or 취소 버튼 onClick
-  const onToggleBtnClick = (id) => dispatch(toggleStatusTodo(id));
-  // 삭제 버튼 onClick
-  const onDeleteBtnClick = (id) => dispatch(deleteTodo(id));
+  // // 완료 or 취소 버튼 onClick
+  // const onToggleBtnClick = (id) => dispatch(toggleStatusTodo(id));
+  // // 삭제 버튼 onClick
+  // const onDeleteBtnClick = (id) => dispatch(deleteTodo(id));
   
   return (
     <Todo key={item.id}>
@@ -20,7 +20,7 @@ function ListMap({ item }) {
       </Link>
       <h1>{item.title}</h1>
       <p>{item.body}</p>
-      <TodoBtnArea>
+      {/* <TodoBtnArea>
         <TodoDeleteBtn
           onClick={() => onDeleteBtnClick(item.id)}
         >
@@ -31,7 +31,7 @@ function ListMap({ item }) {
         >
           {!item.isDone ? '완료' : '취소'}
         </TodoCheckBtn>
-      </TodoBtnArea>
+      </TodoBtnArea> */}
     </Todo>
   )
 }
@@ -49,19 +49,19 @@ const LinkP = styled.p`
   font-size: 12px;
 `;
 
-const TodoBtnArea = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-  margin-bottom: 10px;
-`;
+// const TodoBtnArea = styled.div`
+//   display: flex;
+//   justify-content: space-between;
+//   margin-top: 20px;
+//   margin-bottom: 10px;
+// `;
 
-const TodoDeleteBtn = styled.button`
-  width: 110px;
-  border: 2px solid red;
-`;
+// const TodoDeleteBtn = styled.button`
+//   width: 110px;
+//   border: 2px solid red;
+// `;
 
-const TodoCheckBtn = styled.button`
-  width: 110px;
-  border: 2px solid green;
-`;
+// const TodoCheckBtn = styled.button`
+//   width: 110px;
+//   border: 2px solid green;
+// `;
